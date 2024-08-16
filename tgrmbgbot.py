@@ -6,6 +6,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from requests.exceptions import RequestException
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 
 load_dotenv()
@@ -22,6 +23,9 @@ REMOVE_BG_API_KEY = os.getenv('rmbg_key')
 
 # Your Telegram Bot Token
 TELEGRAM_BOT_TOKEN = os.getenv('tg_token')
+
+
+keep_alive()
 
 # Retry function for making requests
 def make_request_with_retry(url, method='get', max_retries=5, **kwargs):
