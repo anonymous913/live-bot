@@ -1,14 +1,14 @@
 {
     "builds": [
       {
-        "src": "tgrmbgbot.py",
+        "src": "/api/tgrmbgbot.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/.*",
-        "dest": "tgrmbgbot.py"
+        "dest": "api/tgrmbgbot.py"
       }
     ]
   }
